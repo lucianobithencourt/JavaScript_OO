@@ -104,6 +104,9 @@ console.log('-------------------------------');
 
 let ccorrent = new ContaBancaria ('6892','16300-4',500,1500)
 
+
+ccorrent.depositar(1500)
+
 console.log(`Agencia:${ccorrent.agencia}`);
 console.log(`Conta: ${ccorrent.conta}`);
 console.log(`Saldo:${ccorrent.saldo.toFixed(2)}`);
