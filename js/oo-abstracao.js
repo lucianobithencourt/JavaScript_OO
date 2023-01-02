@@ -1,113 +1,44 @@
-// Abstração de Objeto Real em JS-OO
-/**
- * agencia
- * numeroConta
- * numeroAgencia
- * saldo
- * limite
- */
+// ABSTRAÇÃO POO-JS
 
-// Criar  o objeto usando camelCase declarando as prmeiras letras maiusculas
-/*class ContaBancaria {
 
-    /*
-     - Ao se criar os atributos por boas pratica "se declara a segunda palavra com a letra Maiuscula.
-     - Para chamar o atributo se declara o metodo constructor (){} e dentro dele se se declara o operador "this.nomea-do-atributo para chamar  os atributos do objeto". 
 
-    /**  
-    constructor() {
-            this.agencia = 1075
-            this.numeroConta = 8351125
-            this.saldo = 50
-            this.limite = 45
-        }
-        // fim constructor
 
-    // declara as  ações que  o objeto tem
+// ABSTRAÇÃO OO-JS
 
-    depositar(valorDepositado) {
-        this.saldo += valorDepositado;
+class Pessoa {
+
+    // atributos
+    nome
+    idade 
+    peso 
+    altura
+
+    constructor($nome,$idade,$peso,$altura){
+
+        this.nome = $nome;
+        this.idade = $idade;
+        this.peso = $peso;
+        this.altura = $altura;
+        this.imc = (this.peso/(this.altura**2)).toFixed(2)
+
     }
-
-    sacar(valorSacado) {
-        this.saldo -= valorSacado;
-        
-    }
-
-      
-    verSaldo() {
-        return this.saldo
-    }
-}
-// fim objeto 
-
-
-// Criando  instanciamento do Obejto ContaBancaria
-let cc = new ContaBancaria()
-
-cc.depositar(450)
-
-
-
-
-console.log("Numero da Agencia : " + cc.agencia);
-console.log("Numero da ContaCorrente : " + cc.numeroConta);
-console.log("Saldo da Conta : " + cc.verSaldo().toFixed(2));
-console.log("Saldo do Limite : " + cc.limite.toFixed(2));
-
-document.write(`Numero da Agencia :  ${cc.agencia} <br><br>`);
-document.write(`Numero da ContaCorrente : ${cc.numeroConta}<br><br>`);
-document.write(`Saldo da Conta :  ${cc.verSaldo().toFixed(2)}<br><br>`);
-document.write(`Saldo do Limite : ${cc.limite.toFixed(2)}<br>`);
-*/
-
-// ABSTRAÇÃO OBJETO Pessoa 
-
-class ContaBancaria {
-    constructor(pa_agencia,pa_conta,pa_saldo,pa_limite){
-        this.agencia = pa_agencia;
-        this.conta = pa_conta;
-        this.saldo = pa_saldo;
-        this.limite = pa_limite;
-    }
-
-    // Metodos 
-
-    depositar(valorDeposito){
-        this.saldo += valorDeposito
-    }
-
-    sacar(valorSaque) {
-        this.saldo -= valorSaque
-    }
-
-    consultarSaldo () {
-        return this.saldo
-    }
+    
 }
 
-// Instaciamento 
-let cpoup = new ContaBancaria ('0688','7531595',45,100)
+// instaciamento
 
-cpoup.depositar(450)
-
-cpoup.sacar(500)
-
-cpoup.depositar(500)
-
-console.log(`Agencia:${cpoup.agencia}`);
-console.log(`Conta: ${cpoup.conta}`);
-console.log(`Saldo:${cpoup.saldo.toFixed(2)}`);
-console.log(`Limte ${cpoup.limite}`);
-
-console.log('-------------------------------');
-
-let ccorrent = new ContaBancaria ('6892','16300-4',500,1500)
+let pessoa1 = new Pessoa('Lucas Brito',23,78.2,1.89)
+let pessoa2 = new Pessoa('Angela Cunha',43,58.2,1.69)
+let pessoa3 = new Pessoa('Gabriel Predosa',23,98.2,1.99)
+let pessoa4 = new Pessoa('Fernado Couto',53,88.2,2.01)
 
 
-ccorrent.depositar(1500)
 
-console.log(`Agencia:${ccorrent.agencia}`);
-console.log(`Conta: ${ccorrent.conta}`);
-console.log(`Saldo:${ccorrent.saldo.toFixed(2)}`);
-console.log(`Limite ${ccorrent.limite.toFixed(2)}`);
+console.log(pessoa1);
+console.log('------------------------------');
+console.log(pessoa2);
+console.log('------------------------------');
+console.log(pessoa3);
+console.log('------------------------------');
+console.log(pessoa4);
+console.log('------------------------------');
