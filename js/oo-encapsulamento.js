@@ -1,6 +1,135 @@
 // ENCAPSULAMENTO-OO-JS
 
-class Pessoa {
+class Veiculo {
+    _nome 
+    _fabricante
+    _cor 
+    _ano
+
+    constructor($nome,$fabricante,$cor,$ano){
+
+        this._nome = $nome;
+        this._cor = $cor;
+        this._fabricante = $fabricante;
+        this._ano = $ano;
+    }
+
+    get nome (){
+        return this._nome
+    }
+
+    set nome (novoNome) {
+        this._nome = novoNome;
+    }
+
+    get cor (){
+        return this._cor
+    }
+
+    set cor (novaCor) {
+        this._cor = novaCor;
+    }
+}
+
+
+
+// instanciamento
+
+let carro1 = new Veiculo ('$nome','$cor','$fabricante','$ano');
+let carro2 = new Veiculo ('$nome','$cor','$fabricante','$ano')
+
+carro1._nome = 'Maserati-Corsel'
+carro1._cor = 'Vermelho'
+carro1._fabricante = 'Maseratti-Italy'
+carro1._ano = 2023;
+
+console.log(carro1._nome);
+console.log(carro1._cor);
+console.log(carro1._fabricante);
+console.log(carro1._ano);
+
+// ----------------------------------------
+console.log("-------------------------------------");
+carro2._nome = 'Mustang'
+carro2._cor = 'Branco'
+carro2._fabricante = 'GM'
+carro2._ano = 2022;
+
+console.log(carro2._nome);
+console.log(carro2._cor);
+console.log(carro2._fabricante);
+console.log(carro2._ano);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * class Pessoa {
 
     // atributos
     _nome
@@ -10,8 +139,8 @@ class Pessoa {
     _imc
 
     constructor($nome, $idade, $peso, $altura) {
-        // this._atributo usado em convenção da liguagem para  informar que é privado 
-        // this.#atributo documentação da linguagem indicando um atributo privado
+        // this.(anderline "_" )atributo usado em convenção da liguagem para  informar que é privado 
+        // this.(tralha "#")atributo de documentação da linguagem indicando um atributo privado não muito usado devido as versões do ECMA anteriores
 
         this._nome = $nome;
         this._idade = $idade;
@@ -56,9 +185,6 @@ class Pessoa {
     set altura(novaAltura) {
         this._altura = novaAltura;
     }
-
-
-
 }
 
 // Instanciamento
@@ -112,3 +238,4 @@ console.log(pessoa3.imc);
 console.log('------------------------------');
 // console.log(pessoa4);
 // console.log('------------------------------');
+ */
