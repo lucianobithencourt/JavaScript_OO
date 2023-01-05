@@ -45,6 +45,5 @@ class Papagaio extends Passaro {
 
 let papagaio = new Papagaio (true,'vermelho-azul',45,250)
 console.log(papagaio);
+papagaio.voar()
 
-let papagaio2 = new Papagaio (false,'verde',20,50)
-console.log(papagaio2);

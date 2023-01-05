@@ -1,11 +1,12 @@
 // HERANÇA POO-JS
 
-// classPai
+// classPai ou superPai
 
 class Animal {
     constructor (){
         this.cor = ''
-        this.tamanho = ''
+        this.tamanho = null
+        this.peso = ''
     }
 
     dormir() {
@@ -13,12 +14,9 @@ class Animal {
     }
 }
 
-
-
 /**-------------------------------------------------------------------------- */
+// classFilho  ou subClass
 class Cachorro extends Animal {
-
-    
 
     constructor(){
         super()
@@ -35,22 +33,7 @@ class Cachorro extends Animal {
 }
 
 /**-------------------------------------------------------------------------- */
-class Gato extends Cachorro {
-
-   
-
-    constructor(){
-        super()
-        this.orelhas = 'Curtas pomtutas'
-    }
-        
-    Miar () {
-        console.log('Miando....');
-    }
-}
-
-/**-------------------------------------------------------------------------- */
-
+// classFilho  ou subClass
 class Passaro extends Animal {
     
 
@@ -63,21 +46,23 @@ class Passaro extends Animal {
     voar(){
         console.log('Voando.. V..v..v.V');
     }
-
     
 }
+/**-------------------------------------------------------------------------- */
+// classFilho  ou subClass
+class Papagaio extends Passaro {
+    
+    constructor(){
+        super()
+        this.bico = 'MédioCurto'
+    }
+    falar(){
+        console.log('Falando..Curupaco loro');
+    }
+    
+}
+// Instanciamento
 
 let cachorro = new Cachorro ()
 
-cachorro.rosnar()
-
-let passaro = new Passaro ()
-
-passaro.voar()
-
-
-let gato = new Gato () 
-
-    
-
-    gato.correr()
+console.log(cachorro);
